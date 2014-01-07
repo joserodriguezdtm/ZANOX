@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\daniel.lopez\Desktop\Zanox.API\ZanoxV2.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CEFC4488-7D86-4C68-B974-E3F427ED3F37}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>ZanoxV2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>1.0.4955.28682</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>ZanoxV2</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UserDefinedFunctions.cs" />
+    <Compile Include="ConnectAPI.cs" />
+    <Compile Include="Signature.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="PublisherAPI.cs" />
+    <Compile Include="Publisher\PublisherService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Publisher\GetApplicationRequest.cs" />
+    <Compile Include="Publisher\GetBalanceResponse.cs" />
+    <Compile Include="Publisher\balanceItem.cs" />
+    <Compile Include="Publisher\GetBalanceRequest.cs" />
+    <Compile Include="Publisher\GetPaymentResponse.cs" />
+    <Compile Include="Publisher\paymentItem.cs" />
+    <Compile Include="Publisher\bankAccountItem.cs" />
+    <Compile Include="Publisher\GetPaymentRequest.cs" />
+    <Compile Include="Publisher\GetBankAccountResponse.cs" />
+    <Compile Include="Publisher\GetBankAccountRequest.cs" />
+    <Compile Include="Publisher\statsType.cs" />
+    <Compile Include="Publisher\reportItem.cs" />
+    <Compile Include="Publisher\subStringIdentifierType.cs" />
+    <Compile Include="Publisher\subStringIdentifierTypeWithStatus.cs" />
+    <Compile Include="Publisher\GetReportBasicResponse.cs" />
+    <Compile Include="Publisher\GetReportBasicRequest.cs" />
+    <Compile Include="Publisher\reviewStateEnum.cs" />
+    <Compile Include="Publisher\groupByEnum.cs" />
+    <Compile Include="Publisher\UpdateProfileResponse.cs" />
+    <Compile Include="Publisher\profileItem.cs" />
+    <Compile Include="Publisher\UpdateProfileRequest.cs" />
+    <Compile Include="Publisher\UpdateAdspaceResponse.cs" />
+    <Compile Include="Publisher\adspaceItem.cs" />
+    <Compile Include="Publisher\adspaceTypeEnum.cs" />
+    <Compile Include="Publisher\adspaceScopeEnum.cs" />
+    <Compile Include="Publisher\UpdateAdspaceRequest.cs" />
+    <Compile Include="Publisher\SearchProgramsResponse.cs" />
+    <Compile Include="Publisher\programItem.cs" />
+    <Compile Include="Publisher\programStatusEnum.cs" />
+    <Compile Include="Publisher\SearchProgramsRequest.cs" />
+    <Compile Include="Publisher\partnerShipEnum.cs" />
+    <Compile Include="Publisher\SearchProductsResponse.cs" />
+    <Compile Include="Publisher\productItem.cs" />
+    <Compile Include="Publisher\trackingLinkType.cs" />
+    <Compile Include="Publisher\imageType.cs" />
+    <Compile Include="Publisher\SearchProductsRequest.cs" />
+    <Compile Include="Publisher\searchTypeEnum.cs" />
+    <Compile Include="Publisher\trackingCategoryItem.cs" />
+    <Compile Include="Publisher\transactionTypeEnum.cs" />
+    <Compile Include="Publisher\GetTrackingCategoriesResponse.cs" />
+    <Compile Include="Publisher\GetTrackingCategoriesRequest.cs" />
+    <Compile Include="Publisher\GetLeadResponse.cs" />
+    <Compile Include="Publisher\leadItem.cs" />
+    <Compile Include="Publisher\subPublisherType.cs" />
+    <Compile Include="Publisher\gppType.cs" />
+    <Compile Include="Publisher\GetLeadRequest.cs" />
+    <Compile Include="Publisher\GetSaleResponse.cs" />
+    <Compile Include="Publisher\saleItem.cs" />
+    <Compile Include="Publisher\GetSaleRequest.cs" />
+    <Compile Include="Publisher\GetSalesResponse.cs" />
+    <Compile Include="Publisher\GetSalesRequest.cs" />
+    <Compile Include="Publisher\dateTypeEnum.cs" />
+    <Compile Include="Publisher\GetProgramApplicationsResponse.cs" />
+    <Compile Include="Publisher\programApplicationItem.cs" />
+    <Compile Include="Publisher\programApplicationStatusEnum.cs" />
+    <Compile Include="Publisher\GetProgramApplicationsRequest.cs" />
+    <Compile Include="Publisher\GetProgramCategoriesResponse.cs" />
+    <Compile Include="Publisher\GetProgramCategoriesRequest.cs" />
+    <Compile Include="Publisher\GetProgramResponse.cs" />
+    <Compile Include="Publisher\GetProgramRequest.cs" />
+    <Compile Include="Publisher\GetProfileResponse.cs" />
+    <Compile Include="Publisher\GetProfileRequest.cs" />
+    <Compile Include="Publisher\productCategoryType.cs" />
+    <Compile Include="Publisher\GetProductCategoriesResponse.cs" />
+    <Compile Include="Publisher\GetProductCategoriesRequest.cs" />
+    <Compile Include="Publisher\GetProductResponse.cs" />
+    <Compile Include="Publisher\GetProductRequest.cs" />
+    <Compile Include="Publisher\GetPaymentsResponse.cs" />
+    <Compile Include="Publisher\GetPaymentsRequest.cs" />
+    <Compile Include="Publisher\GetLeadsResponse.cs" />
+    <Compile Include="Publisher\GetLeadsRequest.cs" />
+    <Compile Include="Publisher\GetBalancesResponse.cs" />
+    <Compile Include="Publisher\GetBalancesRequest.cs" />
+    <Compile Include="Publisher\GetAdspacesResponse.cs" />
+    <Compile Include="Publisher\GetAdspacesRequest.cs" />
+    <Compile Include="Publisher\GetAdspaceResponse.cs" />
+    <Compile Include="Publisher\GetAdspaceRequest.cs" />
+    <Compile Include="Publisher\GetAdmediumCategoriesResponse.cs" />
+    <Compile Include="Publisher\GetAdmediumCategoriesRequest.cs" />
+    <Compile Include="Publisher\GetAdmediumResponse.cs" />
+    <Compile Include="Publisher\admediumItem.cs" />
+    <Compile Include="Publisher\admediaTypeEnum.cs" />
+    <Compile Include="Publisher\admediaPurposeEnum.cs" />
+    <Compile Include="Publisher\GetAdmediumRequest.cs" />
+    <Compile Include="Publisher\GetAdmediaResponse.cs" />
+    <Compile Include="Publisher\GetAdmediaRequest.cs" />
+    <Compile Include="Publisher\GetBankAccountsResponse.cs" />
+    <Compile Include="Publisher\GetBankAccountsRequest.cs" />
+    <Compile Include="Publisher\DeleteProgramApplicationResponse.cs" />
+    <Compile Include="Publisher\DeleteProgramApplicationRequest.cs" />
+    <Compile Include="Publisher\DeleteAdspaceResponse.cs" />
+    <Compile Include="Publisher\DeleteAdspaceRequest.cs" />
+    <Compile Include="Publisher\CreateProgramApplicationResponse.cs" />
+    <Compile Include="Publisher\CreateProgramApplicationRequest.cs" />
+    <Compile Include="Publisher\CreateAdspaceResponse.cs" />
+    <Compile Include="Publisher\CreateAdspaceRequest.cs" />
+    <Compile Include="Publisher\DeleteSettingResponse.cs" />
+    <Compile Include="Publisher\DeleteSettingRequest.cs" />
+    <Compile Include="Publisher\UpdateSettingResponse.cs" />
+    <Compile Include="Publisher\settingItem.cs" />
+    <Compile Include="Publisher\subStringIdentifierStringType.cs" />
+    <Compile Include="Publisher\settingTypeEnum.cs" />
+    <Compile Include="Publisher\UpdateSettingRequest.cs" />
+    <Compile Include="Publisher\CreateSettingResponse.cs" />
+    <Compile Include="Publisher\CreateSettingRequest.cs" />
+    <Compile Include="Publisher\GetSettingResponse.cs" />
+    <Compile Include="Publisher\GetSettingRequest.cs" />
+    <Compile Include="Publisher\GetSettingsResponse.cs" />
+    <Compile Include="Publisher\GetSettingsRequest.cs" />
+    <Compile Include="Publisher\DeleteMediaSlotResponse.cs" />
+    <Compile Include="Publisher\DeleteMediaSlotRequest.cs" />
+    <Compile Include="Publisher\UpdateMediaSlotResponse.cs" />
+    <Compile Include="Publisher\mediaSlotItem.cs" />
+    <Compile Include="Publisher\sizeType.cs" />
+    <Compile Include="Publisher\mediaSlotStatusEnum.cs" />
+    <Compile Include="Publisher\UpdateMediaSlotRequest.cs" />
+    <Compile Include="Publisher\CreateMediaSlotResponse.cs" />
+    <Compile Include="Publisher\CreateMediaSlotRequest.cs" />
+    <Compile Include="Publisher\GetMediaSlotsResponse.cs" />
+    <Compile Include="Publisher\GetMediaSlotsRequest.cs" />
+    <Compile Include="Publisher\GetMediaSlotResponse.cs" />
+    <Compile Include="Publisher\GetMediaSlotRequest.cs" />
+    <Compile Include="Publisher\SearchExclusiveIncentivesResponse.cs" />
+    <Compile Include="Publisher\incentiveItem.cs" />
+    <Compile Include="Publisher\incentiveTypeEnum.cs" />
+    <Compile Include="Publisher\prizeType.cs" />
+    <Compile Include="Publisher\SearchExclusiveIncentivesRequest.cs" />
+    <Compile Include="Publisher\SearchIncentivesResponse.cs" />
+    <Compile Include="Publisher\SearchIncentivesRequest.cs" />
+    <Compile Include="Publisher\GetExclusiveIncentiveResponse.cs" />
+    <Compile Include="Publisher\GetExclusiveIncentiveRequest.cs" />
+    <Compile Include="Publisher\GetIncentiveResponse.cs" />
+    <Compile Include="Publisher\GetIncentiveRequest.cs" />
+    <Compile Include="Publisher\DeleteApplicationResponse.cs" />
+    <Compile Include="Publisher\DeleteApplicationRequest.cs" />
+    <Compile Include="Publisher\UpdateApplicationResponse.cs" />
+    <Compile Include="Publisher\applicationItem.cs" />
+    <Compile Include="Publisher\connectType.cs" />
+    <Compile Include="Publisher\roleTypeEnum.cs" />
+    <Compile Include="Publisher\connectStatusTypeEnum.cs" />
+    <Compile Include="Publisher\pricingType.cs" />
+    <Compile Include="Publisher\profileTypeEnum.cs" />
+    <Compile Include="Publisher\applicationTypeEnum.cs" />
+    <Compile Include="Publisher\UpdateApplicationRequest.cs" />
+    <Compile Include="Publisher\CreateApplicationResponse.cs" />
+    <Compile Include="Publisher\CreateApplicationRequest.cs" />
+    <Compile Include="Publisher\GetApplicationsResponse.cs" />
+    <Compile Include="Publisher\GetApplicationsRequest.cs" />
+    <Compile Include="Publisher\GetApplicationResponse.cs" />
+    <Compile Include="Auth\ConnectService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Auth\closeSession.cs" />
+    <Compile Include="Auth\userLoginUpdateItem.cs" />
+    <Compile Include="Auth\loginStatusEnum.cs" />
+    <Compile Include="Auth\loginTypeEnum.cs" />
+    <Compile Include="Auth\sessionType.cs" />
+    <Compile Include="Auth\offlineSessionType.cs" />
+    <Compile Include="Auth\userLoginItem.cs" />
+    <Compile Include="Auth\closeSessionResponse.cs" />
+    <Compile Include="Auth\createConnectRequest.cs" />
+    <Compile Include="Auth\roleType.cs" />
+    <Compile Include="Auth\createConnectResponse.cs" />
+    <Compile Include="Auth\createAnonymousUserLoginRequest.cs" />
+    <Compile Include="Auth\createAnonymousUserLoginResponse.cs" />
+    <Compile Include="Auth\deleteAnonymousUserLoginRequest.cs" />
+    <Compile Include="Auth\deleteAnonymousUserLoginResponse.cs" />
+    <Compile Include="Auth\getOfflineSession.cs" />
+    <Compile Include="Auth\getOfflineSessionResponse.cs" />
+    <Compile Include="Auth\getUserLoginRequest.cs" />
+    <Compile Include="Auth\getUserLoginResponse.cs" />
+    <Compile Include="Auth\getSession.cs" />
+    <Compile Include="Auth\getSessionResponse.cs" />
+    <Compile Include="Auth\getSessionForMarketplace.cs" />
+    <Compile Include="Auth\getSessionForMarketplaceResponse.cs" />
+    <Compile Include="Auth\getUiUrl.cs" />
+    <Compile Include="Auth\getUiUrlResponse.cs" />
+    <Compile Include="Auth\promoteSessionRequest.cs" />
+    <Compile Include="Auth\promoteTypeEnum.cs" />
+    <Compile Include="Auth\promoteSessionResponse.cs" />
+    <Compile Include="Auth\getPermanentToken.cs" />
+    <Compile Include="Auth\getPermanentTokenResponse.cs" />
+    <Compile Include="Auth\updateAnonymousUserLoginRequest.cs" />
+    <Compile Include="Auth\updateAnonymousUserLoginResponse.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
