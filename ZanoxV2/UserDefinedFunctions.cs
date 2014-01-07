@@ -23,8 +23,8 @@ public class UserDefinedFunctions
       PublisherAPI publisherApi = new PublisherAPI();
       sessionType session = new sessionType()
       {
-        connectId = "375C4284CB3A326CBEAD",
-        secretKey = "1a1c9584c3e447+0A89472b0bEaa53/726c08c4b"
+        connectId = "YOUR-CONNECT-ID",
+        secretKey = "YOUR-SECRET-KEY"
       };
       int total = 0;
       IList<saleItem> sales = publisherApi.GetSales(session, Fecha, dateTypeEnum.trackingDate, new int?(), new int?(), new reviewStateEnum?(), 50, 0, out total);
