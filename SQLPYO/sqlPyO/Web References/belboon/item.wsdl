@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="urn:DefaultNamespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="urn:DefaultNamespace" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:DefaultNamespace" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:complexType name="HandlerResultSoap_Processor">
+        <xsd:sequence>
+          <xsd:element name="code" type="xsd:integer" />
+          <xsd:element name="message" type="xsd:string" />
+          <xsd:element name="rid" type="xsd:integer" />
+          <xsd:element name="testmode" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HandlerResultSoap">
+        <xsd:sequence>
+          <xsd:element name="processor" type="tns:HandlerResultSoap_Processor" />
+          <xsd:element name="handler" type="xsd:anyType" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getAccountInfoRequest" />
+  <wsdl:message name="getAccountInfoResponse">
+    <wsdl:part name="result" type="tns:HandlerResultSoap" />
+  </wsdl:message>
+  <wsdl:message name="insertEventDataRequest">
+    <wsdl:part name="aData" type="xs:anyType" />
+  </wsdl:message>
+  <wsdl:message name="insertEventDataResponse">
+    <wsdl:part name="result" type="tns:HandlerResultSoap" />
+  </wsdl:message>
+  <wsdl:message name="getEventListRequest">
+    <wsdl:part name="adPlatformIds" type="xs:anyType" />
+    <wsdl:part name="programId" type="xs:int" />
+    <wsdl:part name="eventType" type="xs:string" />
+    <wsdl:part name="eventStatus" type="xs:string" />
+    <wsdl:part name="eventCurrency" type="xs:string" />
+    <wsdl:part name="eventDateStart" type="xs:date" />
+    <wsdl:part name="eventDateEnd" type="xs:date" />
+    <wsdl:part name="eventChangeDateStart" type="xs:date" />
+    <wsdl:part name="eventChangeDateEnd" type="xs:date" />
+    <wsdl:part name="orderBy" type="xs:anyType" />
+    <wsdl:part name="limit" type="xs:int" />
+    <wsdl:part name="offset" type="xs:int" />
+  </wsdl:message>
+  <wsdl:message name="getEventListResponse">
+    <wsdl:part name="result" type="tns:HandlerResultSoap" />
+  </wsdl:message>
+  <wsdl:message name="getVoucherCodesRequest">
+    <wsdl:part name="adPlatformIds" type="xs:anyType" />
+    <wsdl:part name="programId" type="xs:integer" />
+    <wsdl:part name="query" type="xs:string" />
+    <wsdl:part name="hasPartnership" type="xs:boolean" />
+    <wsdl:part name="voucherCode" type="xs:string" />
+    <wsdl:part name="voucherType" type="xs:string" />
+    <wsdl:part name="validFrom" type="xs:string" />
+    <wsdl:part name="validTo" type="xs:string" />
+    <wsdl:part name="orderBy" type="xs:anyType" />
+    <wsdl:part name="limit" type="xs:int" />
+    <wsdl:part name="offset" type="xs:int" />
+  </wsdl:message>
+  <wsdl:message name="getVoucherCodesResponse">
+    <wsdl:part name="result" type="tns:HandlerResultSoap" />
+  </wsdl:message>
+  <wsdl:message name="getProgramCategoriesRequest">
+    <wsdl:part name="language" type="xs:string" />
+    <wsdl:part name="categoryId" type="xs:int" />
+    <wsdl:part name="query" type="xs:string" />
+    <wsdl:part name="orderBy" type="xs:anyType" />
+    <wsdl:part name="limit" type="xs:int" />
+    <wsdl:part name="offset" type="xs:int" />
+  </wsdl:message>
+  <wsdl:message name="getProgramCategoriesResponse">
+    <wsdl:part name="result" type="tns:HandlerResultSoap" />
+  </wsdl:message>
+  <wsdl:message name="getProgramDetailsRequest">
+    <wsdl:part name="programId" type="xs:int" />
+  </wsdl:message>
+  <wsdl:message name="getProgramDetailsResponse">
+    <wsdl:part name="result" type="tns:HandlerResultSoap" />
+  </wsdl:message>
+  <wsdl:message name="searchCommonAdsRequest">
+    <wsdl:part name="adPlatformIds" type="xs:anyType" />
+    <wsdl:part name="hasPartnership" type="xs:boolean" />
+    <wsdl:part name="programId" type="xs:int" />
+    <wsdl:part name="adType" type="xs:string" />
+    <wsdl:part name="adWidth" type="xs:int" />
+    <wsdl:part name="adHeight" type="xs:int" />
+    <wsdl:part name="orderBy" type="xs:anyType" />
+    <wsdl:part name="limit" type="xs:int" />
+    <wsdl:part name="offset" type="xs:int" />
+  </wsdl:message>
+  <wsdl:message name="searchCommonAdsResponse">
+    <wsdl:part name="result" type="tns:HandlerResultSoap" />
+  </wsdl:message>
+  <wsdl:message name="getProgramsByCategoryRequest">
+    <wsdl:part name="categoryId" type="xs:int" />
+    <wsdl:part name="adPlatformId" type="xs:int" />
+    <wsdl:part name="orderBy" type="xs:anyType" />
+  </wsdl:message>
+  <wsdl:message name="getProgramsByCategoryResponse">
+    <wsdl:part name="result" type="tns:HandlerResultSoap" />
+  </wsdl:message>
+  <wsdl:message name="getProgramsRequest">
+    <wsdl:part name="adPlatformId" type="xs:int" />
+    <wsdl:part name="programLanguage" type="xs:string" />
+    <wsdl:part name="partnershipStatus" type="xs:string" />
+    <wsdl:part name="query" type="xs:string" />
+    <wsdl:part name="orderBy" type="xs:anyType" />
+    <wsdl:part name="limit" type="xs:string" />
+    <wsdl:part name="offset" type="xs:string" />
+  </wsdl:message>
+  <wsdl:message name="getProgramsResponse">
+    <wsdl:part name="result" type="tns:HandlerResultSoap" />
+  </wsdl:message>
+  <wsdl:message name="getNewProgramsRequest">
+    <wsdl:part name="adPlatformId" type="xs:int" />
+    <wsdl:part name="programLanguage" type="xs:string" />
+    <wsdl:part name="partnershipStatus" type="xs:string" />
+    <wsdl:part name="orderBy" type="xs:anyType" />
+    <wsdl:part name="limit" type="xs:int" />
+    <wsdl:part name="offset" type="xs:int" />
+  </wsdl:message>
+  <wsdl:message name="getNewProgramsResponse">
+    <wsdl:part name="result" type="tns:HandlerResultSoap" />
+  </wsdl:message>
+  <wsdl:message name="searchProgramsRequest">
+    <wsdl:part name="adPlatformId" type="xs:int" />
+    <wsdl:part name="programLanguage" type="xs:string" />
+    <wsdl:part name="partnershipStatus" type="xs:string" />
+    <wsdl:part name="query" type="xs:string" />
+    <wsdl:part name="hasProductFeeds" type="xs:boolean" />
+    <wsdl:part name="hasVoucherCodes" type="xs:boolean" />
+    <wsdl:part name="hasMobileAds" type="xs:boolean" />
+    <wsdl:part name="programStartSince" type="xs:date" />
+    <wsdl:part name="categoryId" type="xs:int" />
+    <wsdl:part name="includeSubCategories" type="xs:boolean" />
+    <wsdl:part name="orderBy" type="xs:anyType" />
+    <wsdl:part name="limit" type="xs:int" />
+    <wsdl:part name="offset" type="xs:int" />
+  </wsdl:message>
+  <wsdl:message name="searchProgramsResponse">
+    <wsdl:part name="result" type="tns:HandlerResultSoap" />
+  </wsdl:message>
+  <wsdl:message name="getStatisticsMonthlyRequest">
+    <wsdl:part name="startMonth" type="xs:date" />
+    <wsdl:part name="endMonth" type="xs:date" />
+    <wsdl:part name="currency" type="xs:string" />
+    <wsdl:part name="adPlatformId" type="xs:int" />
+    <wsdl:part name="groupByProgram" type="xs:boolean" />
+    <wsdl:part name="groupByAdPlatform" type="xs:boolean" />
+    <wsdl:part name="groupByEventStatus" type="xs:boolean" />
+    <wsdl:part name="groupByAdMedia" type="xs:boolean" />
+    <wsdl:part name="groupBySubId" type="xs:boolean" />
+    <wsdl:part name="orderBy" type="xs:anyType" />
+    <wsdl:part name="limit" type="xs:int" />
+    <wsdl:part name="offset" type="xs:int" />
+  </wsdl:message>
+  <wsdl:message name="getStatisticsMonthlyResponse">
+    <wsdl:part name="result" type="tns:HandlerResultSoap" />
+  </wsdl:message>
+  <wsdl:message name="getStatisticsDailyRequest">
+    <wsdl:part name="currency" type="xs:string" />
+    <wsdl:part name="adPlatformId" type="xs:int" />
+    <wsdl:part name="groupByProgram" type="xs:boolean" />
+    <wsdl:part name="groupByAdPlatform" type="xs:boolean" />
+    <wsdl:part name="groupByEventStatus" type="xs:boolean" />
+    <wsdl:part name="groupByAdMedia" type="xs:boolean" />
+    <wsdl:part name="groupBySubId" type="xs:boolean" />
+    <wsdl:part name="orderBy" type="xs:anyType" />
+    <wsdl:part name="limit" type="xs:int" />
+    <wsdl:part name="offset" type="xs:int" />
+  </wsdl:message>
+  <wsdl:message name="getStatisticsDailyResponse">
+    <wsdl:part name="result" type="tns:HandlerResultSoap" />
+  </wsdl:message>
+  <wsdl:message name="getStatisticsByProgramRequest">
+    <wsdl:part name="startDate" type="xs:string" />
+    <wsdl:part name="endDate" type="xs:string" />
+    <wsdl:part name="programId" type="xs:int" />
+    <wsdl:part name="currency" type="xs:string" />
+    <wsdl:part name="groupByMonth" type="xs:boolean" />
+    <wsdl:part name="groupByAdPlatform" type="xs:boolean" />
+    <wsdl:part name="groupByEventStatus" type="xs:boolean" />
+    <wsdl:part name="groupByAdMedia" type="xs:boolean" />
+    <wsdl:part name="groupBySubId" type="xs:boolean" />
+    <wsdl:part name="orderBy" type="xs:anyType" />
+    <wsdl:part name="limit" type="xs:int" />
+    <wsdl:part name="offset" type="xs:int" />
+  </wsdl:message>
+  <wsdl:message name="getStatisticsByProgramResponse">
+    <wsdl:part name="result" type="tns:HandlerResultSoap" />
+  </wsdl:message>
+  <wsdl:message name="getStatisticsByAdPlatformRequest">
+    <wsdl:part name="startDate" type="xs:string" />
+    <wsdl:part name="endDate" type="xs:string" />
+    <wsdl:part name="adPlatformId" type="xs:int" />
+    <wsdl:part name="currency" type="xs:string" />
+    <wsdl:part name="groupByMonth" type="xs:boolean" />
+    <wsdl:part name="groupByProgram" type="xs:boolean" />
+    <wsdl:part name="groupByEventStatus" type="xs:boolean" />
+    <wsdl:part name="groupByAdMedia" type="xs:boolean" />
+    <wsdl:part name="groupBySubId" type="xs:boolean" />
+    <wsdl:part name="orderBy" type="xs:anyType" />
+    <wsdl:part name="limit" type="xs:int" />
+    <wsdl:part name="offset" type="xs:int" />
+  </wsdl:message>
+  <wsdl:message name="getStatisticsByAdPlatformResponse">
+    <wsdl:part name="result" type="tns:HandlerResultSoap" />
+  </wsdl:message>
+  <wsdl:message name="getStatisticsByAdMediaRequest">
+    <wsdl:part name="startDate" type="xs:string" />
+    <wsdl:part name="endDate" type="xs:string" />
+    <wsdl:part name="adMediaId" type="xs:int" />
+    <wsdl:part name="currency" type="xs:string" />
+    <wsdl:part name="groupByMonth" type="xs:boolean" />
+    <wsdl:part name="groupByProgram" type="xs:boolean" />
+    <wsdl:part name="groupByAdPlatform" type="xs:boolean" />
+    <wsdl:part name="groupByEventStatus" type="xs:boolean" />
+    <wsdl:part name="groupBySubId" type="xs:boolean" />
+    <wsdl:part name="orderBy" type="xs:anyType" />
+    <wsdl:part name="limit" type="xs:int" />
+    <wsdl:part name="offset" type="xs:int" />
+  </wsdl:message>
+  <wsdl:message name="getStatisticsByAdMediaResponse">
+    <wsdl:part name="result" type="tns:HandlerResultSoap" />
+  </wsdl:message>
+  <wsdl:message name="getProgramConditionDetailsRequest">
+    <wsdl:part name="programId" type="xs:int" />
+    <wsdl:part name="adPlatformId" type="xs:int" />
+  </wsdl:message>
+  <wsdl:message name="getProgramConditionDetailsResponse">
+    <wsdl:part name="result" type="tns:HandlerResultSoap" />
+  </wsdl:message>
+  <wsdl:portType name="BelboonHandlerBindingPort">
+    <wsdl:operation name="getAccountInfo">
+      <wsdl:input message="tns:getAccountInfoRequest" />
+      <wsdl:output message="tns:getAccountInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="insertEventData">
+      <wsdl:input message="tns:insertEventDataRequest" />
+      <wsdl:output message="tns:insertEventDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getEventList">
+      <wsdl:input message="tns:getEventListRequest" />
+      <wsdl:output message="tns:getEventListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewPrograms">
+      <wsdl:input message="tns:getNewProgramsRequest" />
+      <wsdl:output message="tns:getNewProgramsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getProgramCategories">
+      <wsdl:input message="tns:getProgramCategoriesRequest" />
+      <wsdl:output message="tns:getProgramCategoriesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getProgramConditionDetails">
+      <wsdl:input message="tns:getProgramConditionDetailsRequest" />
+      <wsdl:output message="tns:getProgramConditionDetailsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getProgramDetails">
+      <wsdl:input message="tns:getProgramDetailsRequest" />
+      <wsdl:output message="tns:getProgramDetailsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPrograms">
+      <wsdl:input message="tns:getProgramsRequest" />
+      <wsdl:output message="tns:getProgramsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getProgramsByCategory">
+      <wsdl:input message="tns:getProgramsByCategoryRequest" />
+      <wsdl:output message="tns:getProgramsByCategoryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getStatisticsByAdMedia">
+      <wsdl:input message="tns:getStatisticsByAdMediaRequest" />
+      <wsdl:output message="tns:getStatisticsByAdMediaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getStatisticsByAdPlatform">
+      <wsdl:input message="tns:getStatisticsByAdPlatformRequest" />
+      <wsdl:output message="tns:getStatisticsByAdPlatformResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getStatisticsByProgram">
+      <wsdl:input message="tns:getStatisticsByProgramRequest" />
+      <wsdl:output message="tns:getStatisticsByProgramResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getStatisticsDaily">
+      <wsdl:input message="tns:getStatisticsDailyRequest" />
+      <wsdl:output message="tns:getStatisticsDailyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getStatisticsMonthly">
+      <wsdl:input message="tns:getStatisticsMonthlyRequest" />
+      <wsdl:output message="tns:getStatisticsMonthlyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getVoucherCodes">
+      <wsdl:input message="tns:getVoucherCodesRequest" />
+      <wsdl:output message="tns:getVoucherCodesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchCommonAds">
+      <wsdl:input message="tns:searchCommonAdsRequest" />
+      <wsdl:output message="tns:searchCommonAdsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchPrograms">
+      <wsdl:input message="tns:searchProgramsRequest" />
+      <wsdl:output message="tns:searchProgramsResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BelboonHandlerBinding" type="tns:BelboonHandlerBindingPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="getAccountInfo">
+      <soap:operation soapAction="http://api.belboon.com/webservice/soap/belboon/1.0/getAccountInfo" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertEventData">
+      <soap:operation soapAction="http://api.belboon.com/webservice/soap/belboon/1.0/insertEventData" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEventList">
+      <soap:operation soapAction="http://api.belboon.com/webservice/soap/belboon/1.0/getEventList" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewPrograms">
+      <soap:operation soapAction="http://api.belboon.com/webservice/soap/belboon/1.0/getNewPrograms" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProgramCategories">
+      <soap:operation soapAction="http://api.belboon.com/webservice/soap/belboon/1.0/getProgramCategories" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProgramConditionDetails">
+      <soap:operation soapAction="http://api.belboon.com/webservice/soap/belboon/1.0/getProgramConditionDetails" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProgramDetails">
+      <soap:operation soapAction="http://api.belboon.com/webservice/soap/belboon/1.0/getProgramDetails" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrograms">
+      <soap:operation soapAction="http://api.belboon.com/webservice/soap/belboon/1.0/getPrograms" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProgramsByCategory">
+      <soap:operation soapAction="http://api.belboon.com/webservice/soap/belboon/1.0/getProgramsByCategory" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatisticsByAdMedia">
+      <soap:operation soapAction="http://api.belboon.com/webservice/soap/belboon/1.0/getStatisticsByAdMedia" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatisticsByAdPlatform">
+      <soap:operation soapAction="http://api.belboon.com/webservice/soap/belboon/1.0/getStatisticsByAdPlatform" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatisticsByProgram">
+      <soap:operation soapAction="http://api.belboon.com/webservice/soap/belboon/1.0/getStatisticsByProgram" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatisticsDaily">
+      <soap:operation soapAction="http://api.belboon.com/webservice/soap/belboon/1.0/getStatisticsDaily" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatisticsMonthly">
+      <soap:operation soapAction="http://api.belboon.com/webservice/soap/belboon/1.0/getStatisticsMonthly" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVoucherCodes">
+      <soap:operation soapAction="http://api.belboon.com/webservice/soap/belboon/1.0/getVoucherCodes" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchCommonAds">
+      <soap:operation soapAction="http://api.belboon.com/webservice/soap/belboon/1.0/searchCommonAds" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchPrograms">
+      <soap:operation soapAction="http://api.belboon.com/webservice/soap/belboon/1.0/searchPrograms" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BelboonHandler">
+    <wsdl:port name="BelboonHandler" binding="tns:BelboonHandlerBinding">
+      <soap:address location="http://api.belboon.com/webservice/soap/belboon/1.0/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

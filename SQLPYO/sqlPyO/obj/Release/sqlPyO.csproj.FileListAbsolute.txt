@@ -1,0 +1,4 @@
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\sqlPyO\bin\Release\sqlPyO.dll
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\sqlPyO\bin\Release\sqlPyO.XmlSerializers.dll
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\sqlPyO\obj\Release\sqlPyO.dll
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\sqlPyO\obj\Release\sqlPyO.XmlSerializers.dll

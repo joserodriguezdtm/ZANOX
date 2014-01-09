@@ -1,0 +1,10 @@
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\bin\Release\TESTws.exe.config
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\bin\Release\TESTws.exe
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\bin\Release\TESTws.XmlSerializers.dll
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\bin\Release\TESTws.pdb
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\obj\x86\Release\TESTws.Form1.resources
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\obj\x86\Release\TESTws.Properties.Resources.resources
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\obj\x86\Release\TESTws.csproj.GenerateResource.Cache
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\obj\x86\Release\TESTws.exe
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\obj\x86\Release\TESTws.pdb
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\obj\x86\Release\TESTws.XmlSerializers.dll

@@ -1,0 +1,8 @@
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\bin\Debug\TESTws.exe.config
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\bin\Debug\TESTws.exe
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\bin\Debug\TESTws.pdb
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\obj\x86\Debug\TESTws.Form1.resources
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\obj\x86\Debug\TESTws.Properties.Resources.resources
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\obj\x86\Debug\TESTws.csproj.GenerateResource.Cache
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\obj\x86\Debug\TESTws.exe
+C:\DESARROLLO\DOTNET\ZANOX\ZanoxV2\TESTws\obj\x86\Debug\TESTws.pdb
